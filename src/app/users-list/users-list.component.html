@@ -1,0 +1,56 @@
+<p>
+  User List
+</p>
+
+<div class="container">
+    <button 
+    type="button" class="btn btn-outline-primary pull-right" (click)="addUser()" >
+    Add
+    </button>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col">
+      Name
+    </div>
+    <div class="col">
+      Age
+    </div>
+    <div class="col">
+      Phone
+    </div>
+    <div class="col">
+      
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+  <div class="row align-items-start" *ngFor="let user of users; let i = index">
+    <div class="col">
+        {{ user.name }}
+    </div>
+    <div class="col">
+        {{ user.age }}
+    </div>
+    <div class="col">
+        {{ user.phone }}
+    </div>
+    <div class="col">
+        <!-- <input type="submit" value="Add" class="btn btn-primary" (click)="verHeroe()> -->
+        <button 
+        type="button" class="btn btn-outline-primary btn-block" (click)="editUser(i)" >
+        Edit
+      </button>
+      <!-- <a  routerLink="/edit/">Edit</a> -->
+    </div>
+    <div class="col">
+        <button 
+        type="button" class="btn btn-outline-primary btn-block" >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
